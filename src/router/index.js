@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 const Home = r => require.ensure([], () => r(require('@/pages/home/Home')), 'home')
-const Account = r => require.ensure([], () => r(require('@/pages/account/Account')), 'home')
-const Clause = r => require.ensure([], () => r(require('@/pages/clause/Clause')), 'home')
-const Report = r => require.ensure([], () => r(require('@/pages/report/Report')), 'home')
+const MyApp = r => require.ensure([], () => r(require('@/pages/myApp/MyApp')), 'home')
+const New = r => require.ensure([], () => r(require('@/pages/new/New')), 'home')
+const Shop = r => require.ensure([], () => r(require('@/pages/shop/Shop')), 'home')
+const Setting = r => require.ensure([], () => r(require('@/pages/setting/Setting')), 'home')
 Vue.use(Router)
 
 export default new Router({
@@ -12,7 +13,17 @@ export default new Router({
         {
             path: '/',
             name: 'index',
-            component: Home
+            redirect:'/home'
+        },
+        {
+            path: '/new',
+            name: 'new',
+            component: New
+        },
+        {
+            path: '/myApp',
+            name: 'myApp',
+            component: MyApp
         },
         {
             path: '/home',
@@ -20,19 +31,14 @@ export default new Router({
             component: Home
         },
         {
-            path: '/account',
-            name: 'account',
-            component: Account
+            path: '/shop',
+            name: 'shop',
+            component: Shop
         },
         {
-            path: '/clause',
-            name: 'clause',
-            component: Clause
-        },
-        {
-            path: '/report',
-            name: 'report',
-            component: Report
+            path: '/setting',
+            name: 'setting',
+            component: Setting
         },
     ]
 })

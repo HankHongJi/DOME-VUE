@@ -1,9 +1,13 @@
 <template>
-    <div class="navigation" flex="box:mean">
-        <router-link to='/home' key='1' :class="activeClass"><span class="icon icon-shouye"></span><p>首页</p></router-link>
-        <router-link to='/clause' key='2'><span class="icon icon-chanpintiaokuan"></span><p>条款</p></router-link>
-        <router-link to='/report' key='3'><span class="icon icon-baobiao"></span><p>报表</p></router-link>
-        <router-link to='/account' key='4'><span class="icon icon-zhanghu"></span><p>账户</p></router-link>
+    <div class="navigation">
+        <div class="catalog" flex="box:mean">
+            <router-link to='/new' key='1' :class="activeClass">消息</router-link>
+            <router-link to='/myApp' key='2'>我的应用</router-link>
+            <router-link to='/home' key='3'>首页</router-link>
+            <router-link to='/shop' key='4'>应用商店</router-link>
+            <router-link to='/setting' key='5'>设置</router-link>
+        </div>
+
     </div>
 </template>
 
@@ -28,21 +32,52 @@ export default {
     }
 
 }
-</script>
+</script>m
 <style lang="scss" type="text/css" scoped>
     .navigation{
-        position: fixed;
-        left:0 ;
-        right: 0;
-        bottom: 0;
-        z-index: 999;
-        height: 55px;
-        border-top:0.5px solid #ccc;
-        span{
-            font-size: 20px;
+        height: 50px;
+        .catalog{
+            position: fixed;
+            left:0 ;
+            right: 0;
+            bottom: 0;
+            z-index: 999;
+            height: 50px;
+            border-top:0.5px solid #b2b2b2;
+            color: #666666;
+            line-height: 1;
+            background: #f9f9f9;
+            a{
+                padding-top: 32px;
+            }
+            a:nth-child(1){
+                background: url("../assets/home_news_icon.png") no-repeat center 6px;
+                background-size: 20px auto;
+            }
+            a:nth-child(2){
+                background: url("../assets/home_use_icon.png") no-repeat center 6px;
+                background-size: 19px auto;
+            }
+            a:nth-child(3){
+                background: url("../assets/home_home_icon.png") no-repeat center 6px;
+                background-size: 20px auto;
+                &.router-link-active{
+                    background: url("../assets/home_home_selected_icon.png") no-repeat center 5px;
+                    background-size: 25px auto;
+                }
+            }
+            a:nth-child(4){
+                background: url("../assets/home_store_icon.png") no-repeat center 6px;
+                background-size: 19px auto;
+            }
+            a:nth-child(5){
+                background: url("../assets/home_set_icon.png") no-repeat center 6px;
+                background-size: 19px auto;
+            }
+            .router-link-active{
+                color:#4585f4;
+            }
         }
-        .router-link-active{
-            color:blue;
-        }
+
     }
 </style>
