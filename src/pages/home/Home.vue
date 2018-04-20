@@ -51,12 +51,59 @@
                 </div>
             </div>
         </div>
+        <div class="articles mrgt">
+            <div class="title" flex='main:justify'>
+                <span class="name news">公司新闻</span>
+                <span class="open">更多</span>
+            </div>
+            <ul class="list">
+                <li flex="box:last" v-for="(item,index) in articles.news.list"  :key="index">
+                    <div class="article_content">
+                        <h3>{{item.title}}</h3>
+                        <div class="others" flex='main:justify'>
+                            <span>{{item.createTime.substring(2)}}</span>
+                            <div class="article_data" flex='box:mean'>
+                                <span class="read">{{item.read}}</span>
+                                <span class="comment">{{item.comment}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article_img" flex="main:center">
+                        <img :src="item.imgUrl" alt="公司新闻">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="articles mrgt">
+            <div class="title" flex='main:justify'>
+                <span class="name dynamic">大理最新动态</span>
+                <span class="open">更多</span>
+            </div>
+            <ul class="list">
+                <li flex="box:last" v-for="(item,index) in articles.dynamic.list" :key="index">
+                    <div class="article_content">
+                        <h3>{{item.title}}</h3>
+                        <div class="others" flex='main:justify'>
+                            <span>{{item.createTime.substring(2)}}</span>
+                            <div class="article_data" flex='box:mean'>
+                                <span class="read">{{item.read}}</span>
+                                <span class="comment">{{item.comment}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article_img" flex="main:center">
+                        <img :src="item.imgUrl" alt="公司新闻">
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
 
 <script>
 import banner1 from '@/assets/swiper/home_banner1.png'
 import banner2 from '@/assets/swiper/home_banner2.png'
+import articleImg from '@/assets/article_img.png'
 import { Swipe, SwipeItem } from 'vue-swipe'
 export default {
     name: 'home',
@@ -78,8 +125,61 @@ export default {
                 {name:'通讯录',icon:'icon6'},
                 {name:'一线之音',icon:'icon7'},
                 {name:'添加',icon:'add'}
-
-            ]
+            ],
+            articles:{
+                news:{
+                    name:'公司新闻',
+                    list:[
+                        {
+                            title:'中国移动亮相2018世界移动大会，宣布将建世界规模最大5G试验网',
+                            createTime:'2018-04-09 07:28',
+                            read:111122,
+                            comment:386,
+                            imgUrl:articleImg
+                        },
+                        {
+                            title:'中国移动亮相2018世界移动大会，宣布将建世界规模最大5G试验网',
+                            createTime:'2018-04-09 07:28',
+                            read:4343,
+                            comment:386,
+                            imgUrl:articleImg
+                        },
+                        {
+                            title:'中国移动亮相2018世界移动大会，宣布将建世界规模最大5G试验网',
+                            createTime:'2018-04-09 07:28',
+                            read:433,
+                            comment:386,
+                            imgUrl:articleImg
+                        }
+                    ]
+                },
+                dynamic:{
+                    name:'大理最新动态',
+                    list:[
+                        {
+                            title:'中国移动亮相2018世界移动大会，宣布将建世界规模最大5G试验网',
+                            createTime:'2018-04-09 07:28',
+                            read:1112,
+                            comment:386,
+                            imgUrl:articleImg
+                        },
+                        {
+                            title:'中国移动亮相2018世界移动大会，宣布将建世界规模最大5G试验网',
+                            createTime:'2018-04-09 07:28',
+                            read:4343,
+                            comment:386,
+                            imgUrl:articleImg
+                        },
+                        {
+                            title:'中国移动亮相2018世界移动大会，宣布将建世界规模最大5G试验网',
+                            createTime:'2018-04-09 07:28',
+                            read:433,
+                            comment:386,
+                            imgUrl:articleImg
+                        }
+                    ]
+                }
+            }
         }
     },
     components:{
@@ -92,6 +192,93 @@ export default {
 }
 </script>
 <style lang="scss">
+    .articles{
+        overflow: auto;
+        background: #fff;
+
+        .title{
+            height: 44px;
+            line-height: 44px;
+            padding: 0 18px;
+            border-bottom: 1px solid #e5e5e5;
+            .name{
+                font-size: 16px;
+                font-weight: 900;
+                color: #212121;
+                padding-left: 24px;
+                background:url("../../assets/articles_new.png") no-repeat left center;
+                background-size:13px auto ;
+            }
+            .dynamic{
+                background-image: url("../../assets/articles_dynamic.png");
+            }
+            .open{
+                width: 43px;
+                height: 100%;
+                color: #d1d1d1;
+                background-position:right 49%;
+                background-size: 6px auto;
+            }
+        }
+        .list{
+            padding: 0 18px;
+            overflow: auto;
+            li{
+                height: 126px;
+                padding:18px 0;
+                .article_content{
+                    position: relative;
+                    height: 100%;
+                    h3{
+                        font-size: 14px;
+                        font-weight: 900;
+                        color: #212121;
+                        text-align: left;
+                        padding-right: 10px;
+                        line-height: 23px;
+                        overflow: hidden;
+                    }
+                    .others{
+                        position: absolute;
+                        bottom: 0;
+                        line-height: 1;
+                        height: 12px;
+                        font-size: 12px;
+                        width: 100%;
+                        color: #999999;
+                        .article_data{
+                            width: 110px;
+                            margin-right: 0;
+                            span{
+                                padding-left: 16px;
+                                background: url("../../assets/articles_comment.png") no-repeat left center;
+                                background-size: auto 11px;
+                                text-align: left;
+                            }
+                            .read{
+                                background-image: url("../../assets/articles_consult.png");
+                                background-position: left 46%;
+                            }
+                            .comment{
+
+                            }
+                        }
+                    }
+                }
+                .article_img{
+                    height: 100%;
+                    width: 120px;
+                    overflow: hidden;
+                    img{
+                        height: 100%;
+                    }
+                }
+            }
+            li:not(:last-child){
+                border-bottom: 1px solid #e5e5e5;
+            }
+        }
+    }
     .home{
         .mint-swipe-indicator{
             width: 8px;
@@ -115,6 +302,18 @@ export default {
     .mrgt{
         margin-top: 10px;
     }
+    @media screen and (max-width: 340px) {
+    body {
+        .article_content{
+            .others span{
+                 font-size: 10px;
+            }
+            .article_data{
+                width: 94px !important;
+            }
+        }
+    }
+}
 </style>
 
 <style lang="scss" scoped>
@@ -124,6 +323,7 @@ export default {
         background:#f4f4f4;
         position: relative;
         overflow: auto;
+        padding-bottom:20px;
         .banner-box{
             width: 100%;
             height: 3.78rem;

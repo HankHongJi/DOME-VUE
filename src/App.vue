@@ -46,7 +46,8 @@ export default {
         text-align: center;
         color: #2c3e50;
         height: 100%;
-        overflow: auto;
+        overflow:hidden;
+        padding-bottom: 50px;
     }
 
     .fade-enter-active, .fade-leave-active {
