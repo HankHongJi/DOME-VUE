@@ -22,8 +22,9 @@
             </div>
         </div>
         <ul class="navs mrgt">
-            <li :class="item.icon" v-for="(item,index) in navs" :key='index'>
-               {{item.name}}
+            <li v-for="(item,index) in navs" :key='index' flex="dir:top cross:center">
+                <span class="icon" :class="item.icon"></span>
+                <p>{{item.name}}</p>
             </li>
         </ul>
         <div class="notice">
@@ -56,46 +57,14 @@
                 <span class="name news">公司新闻</span>
                 <span class="open">更多</span>
             </div>
-            <ul class="list">
-                <li flex="box:last" v-for="(item,index) in articles.news.list"  :key="index">
-                    <div class="article_content">
-                        <h3>{{item.title}}</h3>
-                        <div class="others" flex='main:justify'>
-                            <span>{{item.createTime.substring(2)}}</span>
-                            <div class="article_data" flex='box:mean'>
-                                <span class="read">{{item.read}}</span>
-                                <span class="comment">{{item.comment}}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="article_img" flex="main:center">
-                        <img :src="item.imgUrl" alt="公司新闻">
-                    </div>
-                </li>
-            </ul>
+            <list-news :list="articles.news.list"></list-news>
         </div>
         <div class="articles mrgt">
             <div class="title" flex='main:justify'>
                 <span class="name dynamic">大理最新动态</span>
                 <span class="open">更多</span>
             </div>
-            <ul class="list">
-                <li flex="box:last" v-for="(item,index) in articles.dynamic.list" :key="index">
-                    <div class="article_content">
-                        <h3>{{item.title}}</h3>
-                        <div class="others" flex='main:justify'>
-                            <span>{{item.createTime.substring(2)}}</span>
-                            <div class="article_data" flex='box:mean'>
-                                <span class="read">{{item.read}}</span>
-                                <span class="comment">{{item.comment}}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="article_img" flex="main:center">
-                        <img :src="item.imgUrl" alt="公司新闻">
-                    </div>
-                </li>
-            </ul>
+            <list-news :list="articles.dynamic.list"></list-news>
         </div>
     </div>
 </template>
@@ -105,6 +74,7 @@ import banner1 from '@/assets/swiper/home_banner1.png'
 import banner2 from '@/assets/swiper/home_banner2.png'
 import articleImg from '@/assets/article_img.png'
 import { Swipe, SwipeItem } from 'vue-swipe'
+import ListNews from '@/components/ListNews'
 export default {
     name: 'home',
     data () {
@@ -117,14 +87,14 @@ export default {
                 {src:banner2,name:'轮播'}
             ],
             navs:[
-                {name:'资产管理',icon:'icon1'},
-                {name:'云移资讯',icon:'icon2'},
-                {name:'BOMC',icon:'icon3'},
-                {name:'手机经分',icon:'icon4'},
-                {name:'质量管理',icon:'icon5'},
-                {name:'通讯录',icon:'icon6'},
-                {name:'一线之音',icon:'icon7'},
-                {name:'添加',icon:'add'}
+                {name:'资产管理',icon:'icon-zc'},
+                {name:'云移资讯',icon:'icon-yy'},
+                {name:'BOMC',icon:'icon-bo'},
+                {name:'手机经分',icon:'icon-sj'},
+                {name:'质量管理',icon:'icon-zl'},
+                {name:'通讯录',icon:'icon-tx'},
+                {name:'一线之音',icon:'icon-yx'},
+                {name:'添加',icon:'icon-tj'}
             ],
             articles:{
                 news:{
@@ -183,7 +153,7 @@ export default {
         }
     },
     components:{
-        Swipe,SwipeItem
+        Swipe,SwipeItem,ListNews
     },
     methods:{
     },
@@ -218,64 +188,6 @@ export default {
                 color: #d1d1d1;
                 background-position:right 49%;
                 background-size: 6px auto;
-            }
-        }
-        .list{
-            padding: 0 18px;
-            overflow: auto;
-            li{
-                height: 126px;
-                padding:18px 0;
-                .article_content{
-                    position: relative;
-                    height: 100%;
-                    h3{
-                        font-size: 14px;
-                        font-weight: 900;
-                        color: #212121;
-                        text-align: left;
-                        padding-right: 10px;
-                        line-height: 23px;
-                        overflow: hidden;
-                    }
-                    .others{
-                        position: absolute;
-                        bottom: 0;
-                        line-height: 1;
-                        height: 12px;
-                        font-size: 12px;
-                        width: 100%;
-                        color: #999999;
-                        .article_data{
-                            width: 110px;
-                            margin-right: 0;
-                            span{
-                                padding-left: 16px;
-                                background: url("../../assets/articles_comment.png") no-repeat left center;
-                                background-size: auto 11px;
-                                text-align: left;
-                            }
-                            .read{
-                                background-image: url("../../assets/articles_consult.png");
-                                background-position: left 46%;
-                            }
-                            .comment{
-
-                            }
-                        }
-                    }
-                }
-                .article_img{
-                    height: 100%;
-                    width: 120px;
-                    overflow: hidden;
-                    img{
-                        height: 100%;
-                    }
-                }
-            }
-            li:not(:last-child){
-                border-bottom: 1px solid #e5e5e5;
             }
         }
     }
@@ -389,36 +301,15 @@ export default {
         .navs{
                 background: #fff;
                 overflow: auto;
-                padding: 3px 0 26px;
+                padding: 25px 0 3px;
                 li{
                     width:25%;
                     height: 96px;
-                    background:url($url+"home_nav1.png") no-repeat center 46%;
-                    background-size: 50px auto;
-                    padding-top: 82px;
-                    line-height: 1;
                     float: left;
-                }
-                li.icon2{
-                    background-image:url($url+"home_nav2.png");
-                }
-                li.icon3{
-                    background-image:url($url+"home_nav3.png");
-                }
-                li.icon4{
-                    background-image:url($url+"home_nav4.png");
-                }
-                li.icon5{
-                    background-image:url($url+"home_nav5.png");
-                }
-                li.icon6{
-                    background-image:url($url+"home_nav6.png");
-                }
-                li.icon7{
-                    background-image:url($url+"home_nav7.png");
-                }
-                li.add{
-                    background-image:url($url+"home_nav_add.png");
+                    p{
+                        margin-top: 10px;
+                        line-height: 1;
+                    }
                 }
             }
         .mytask{

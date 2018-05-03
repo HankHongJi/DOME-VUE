@@ -1,6 +1,6 @@
 <template>
     <div class="clause">
-        <div>条款</div>
+        <div class="font-md"></div>
     </div>
 </template>
 

@@ -86,6 +86,19 @@ a:hover{
     zoom: 1; /* for ie67*/
 }
 
+.btn{
+    position: relative;
+}
+.btn:active:after{
+	display: block;
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+}
 
 /*遮挡层*/
 
@@ -97,4 +110,32 @@ a:hover{
     bottom: 0;
     background: rgba(0,0,0,0.3);
     z-index: 999;
+}
+
+/*图标*/
+$url:"../assets/";
+.icon{
+    display: block;
+    width:50px;
+    height: 50px;
+    background-size: 50px auto;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+.icon-zc{background-image:url("assets/home_nav1.png")}
+.icon-yy{background-image:url("assets/home_nav2.png")}
+.icon-bo{background-image:url("assets/home_nav3.png")}
+.icon-sj{background-image:url("assets/home_nav4.png")}
+.icon-zl{background-image:url("assets/home_nav5.png")}
+.icon-tx{background-image:url("assets/home_nav6.png")}
+.icon-yx{background-image:url("assets/home_nav7.png")}
+.icon-tj{background-image:url("assets/home_nav_add.png")}
+
+//
+
+.font-md{
+    font-size: 16px;
+    font-weight: 900;
+    color: 212121;
+    text-align: center;
 }

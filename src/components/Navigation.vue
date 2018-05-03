@@ -69,6 +69,10 @@ export default {
             a:nth-child(4){
                 background: url("../assets/home_store_icon.png") no-repeat center 6px;
                 background-size: 19px auto;
+                &.router-link-active{
+                    background: url("../assets/home_store_icon_a.png") no-repeat center 5px;
+                    background-size: 25px auto;
+                }
             }
             a:nth-child(5){
                 background: url("../assets/home_set_icon.png") no-repeat center 6px;
