@@ -5,6 +5,9 @@ const MyApp = r => require.ensure([], () => r(require('@/pages/myApp/MyApp')), '
 const New = r => require.ensure([], () => r(require('@/pages/new/New')), 'home')
 const Shop = r => require.ensure([], () => r(require('@/pages/shop/Shop')), 'home')
 const Setting = r => require.ensure([], () => r(require('@/pages/setting/Setting')), 'home')
+const AppDetails = r => require.ensure([], () => r(require('@/pages/appDetails/AppDetails')), 'appDetails')
+const Notice= r => require.ensure([], () => r(require('@/pages/Notice/Notice')), 'Notice')
+const noticeDetails= r => require.ensure([], () => r(require('@/pages/Notice/NoticeDetails')), 'Notice')
 Vue.use(Router)
 
 export default new Router({
@@ -39,6 +42,21 @@ export default new Router({
             path: '/setting',
             name: 'setting',
             component: Setting
+        },
+        {
+            path: '/appDetails',
+            name: 'appDetails',
+            component: AppDetails
+        },
+        {
+            path: '/notice',
+            name: 'notice',
+            component: Notice
+        },
+        {
+            path: '/noticeDetails',
+            name: 'noticeDetails',
+            component: noticeDetails
         },
     ]
 })

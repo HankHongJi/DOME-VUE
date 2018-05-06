@@ -12,6 +12,11 @@ import ES6Promise from 'es6-promise'
 /************移动端************/
 import vueTouch from './tool/vue-touch'
 
+
+//全局组件
+import BackTitle from './components/BackTitle'
+Vue.component('back-title', BackTitle)
+
 /* eslint-disable*/
 Vue.config.productionTip = false
 
@@ -46,9 +51,13 @@ document.body.addEventListener('touchstart', function () {});
 	document.addEventListener('DOMContentLoaded', setRem, false);
 	setRem();
 })();
-
-
-
+/**********************************路由守卫*********************************/
+router.beforeEach((to, from, next) => {
+    //存放需显示底部导航的路由名
+    const navigationShow=['home','myApp','setting','shop'];
+    store.commit('SET_STATE',{name:"navigation",content:navigationShow.includes(to.name)});
+    next();
+})
 /**********************************VUE创建*********************************/
 Vue.prototype.$tool = tool
 Vue.prototype.$api = api

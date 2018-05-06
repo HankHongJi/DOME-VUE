@@ -71,7 +71,7 @@ export default {
                             text-align: left;
                         }
                         .read{
-                            background-image: url($url+"articles_consult.png");
+                            background-image: url($url+"icon_read.png");
                             background-position: left 46%;
                         }
                         .comment{

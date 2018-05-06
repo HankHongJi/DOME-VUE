@@ -8,7 +8,8 @@ Vue.use(Vuex);
 const state={
     loading:false,    //加载动画
     alert:[],
-    confirm:null
+    confirm:null,
+    navigation:true,
 };
 
 export default new Vuex.Store({state,getters,actions,mutations,});

@@ -27,9 +27,9 @@
                 <p>{{item.name}}</p>
             </li>
         </ul>
-        <div class="notice">
+        <router-link tag="div" to="/notice" class="notice">
             最新公告：微信微博，云南移动精彩无限！
-        </div>
+        </router-link>
         <div class="navs-more">
             <div class="mail">
                 <div class="text">
@@ -165,7 +165,6 @@ export default {
     .articles{
         overflow: auto;
         background: #fff;
-
         .title{
             height: 44px;
             line-height: 44px;
@@ -231,11 +230,6 @@ export default {
 <style lang="scss" scoped>
     $url:'../../assets/';
     .home{
-        height: 100%;
-        background:#f4f4f4;
-        position: relative;
-        overflow: auto;
-        padding-bottom:20px;
         .banner-box{
             width: 100%;
             height: 3.78rem;
@@ -246,6 +240,7 @@ export default {
         .navs-more{
             height: 210px;
             background: #fff;
+            overflow: auto;
             >div{
                 height: 100%;
                 float: left;

@@ -35,7 +35,6 @@ export default {
 </script>m
 <style lang="scss" type="text/css" scoped>
     .navigation{
-        height: 50px;
         .catalog{
             position: fixed;
             left:0 ;
@@ -71,12 +70,16 @@ export default {
                 background-size: 19px auto;
                 &.router-link-active{
                     background: url("../assets/home_store_icon_a.png") no-repeat center 5px;
-                    background-size: 25px auto;
+                    background-size: 24px auto;
                 }
             }
             a:nth-child(5){
                 background: url("../assets/home_set_icon.png") no-repeat center 6px;
                 background-size: 19px auto;
+                &.router-link-active{
+                    background: url("../assets/home_set_icon_a.png") no-repeat center 5px;
+                    background-size: 24px auto;
+                }
             }
             .router-link-active{
                 color:#4585f4;

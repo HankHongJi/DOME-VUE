@@ -4,6 +4,17 @@
 
 const path = require('path')
 
+// 寻找本地IPv4 地址   hank2018.4.8
+var os=require('os'),isOk=true,IPv4='127.0.0.1',
+ifaces=os.networkInterfaces();
+for (var dev in ifaces) {
+    ifaces[dev].forEach(function(details,alias){
+        if (details.family=='IPv4' &&isOk) {
+            isOk=false;
+            IPv4=details.address;
+        }
+    });
+}
 module.exports = {
   dev: {
 
@@ -13,7 +24,7 @@ module.exports = {
     proxyTable: {},
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
+    host: IPv4, // can be overwritten by process.env.HOST
     port: 8090, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true,
     errorOverlay: true,
