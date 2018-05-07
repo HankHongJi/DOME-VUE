@@ -52,10 +52,19 @@ document.body.addEventListener('touchstart', function () {});
 	setRem();
 })();
 /**********************************路由守卫*********************************/
+
+var docEl = document.documentElement;
 router.beforeEach((to, from, next) => {
     //存放需显示底部导航的路由名
     const navigationShow=['home','myApp','setting','shop'];
+    //白色背景路由
+    const bodyBgc=['share'];
     store.commit('SET_STATE',{name:"navigation",content:navigationShow.includes(to.name)});
+    if(bodyBgc.includes(to.name)){
+        docEl.style.backgroundColor='#fff'
+    }else{
+        docEl.style.backgroundColor='#f4f4f4'
+    }
     next();
 })
 /**********************************VUE创建*********************************/

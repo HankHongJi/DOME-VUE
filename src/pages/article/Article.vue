@@ -1,6 +1,6 @@
 <template>
     <div class="notice_details">
-        <back-title title="公告详情"></back-title>
+        <back-title :title="$route.query.title"></back-title>
         <div class="content_outer">
             <h3>{{noticeDetails.title}}</h3>
             <div class="other" flex="main:justify">

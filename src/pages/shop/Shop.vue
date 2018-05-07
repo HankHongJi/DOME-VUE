@@ -71,7 +71,7 @@ export default {
             background: #fff;
             position: relative;
             div{
-                font-size: 14px;
+                font-size: 16px;
                 height: 100%;
                 width: 50%;
                 float: left;
@@ -79,8 +79,7 @@ export default {
             }
             div.active{
                 color: #4585f4;
-                font-weight: 900;
-                font-size: 14px;
+                font-size: 16px;
                 position: relative;
             }
             .active_bar{

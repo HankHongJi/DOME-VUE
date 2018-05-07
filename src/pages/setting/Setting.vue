@@ -16,22 +16,22 @@
                     <span></span>
                 </div>
             </div>
-            <div class="item" flex="box:first">
+            <router-link to="/setSecurity" tag="div" class="item" flex="box:first">
                 <div class="icon icon_sz"></div>
                 <div class="text" flex="main:justify">
                     <div class="name">安全设置</div>
                     <span></span>
                 </div>
-            </div>
+            </router-link>
         </div>
         <div class="navs">
-            <div class="item" flex="box:first">
+            <router-link to="/share" class="item" flex="box:first">
                 <div class="icon icon_sj"></div>
                 <div class="text" flex="main:justify">
                     <div class="name">社交分享</div>
                     <span></span>
                 </div>
-            </div>
+            </router-link>
         </div>
         <div class="navs">
             <div class="item" flex="box:first">

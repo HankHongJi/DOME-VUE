@@ -3,7 +3,7 @@
         <back-title title="公告"></back-title>
         <div class="banner"></div>
         <div class="list">
-            <router-link tag="div" :to="{path:'/noticeDetails',query:{id:item.id}}" class="item" v-for="(item,index) in notice" :key="index">
+            <router-link tag="div" :to="{path:'/article',query:{id:item.id,title:'公告'}}" class="item" v-for="(item,index) in notice" :key="index">
                 <div class="title">
                     {{item.title}}
                 </div>
@@ -17,7 +17,6 @@
 </template>
 
 <script>
-
 export default {
     name: 'notice',
     data () {

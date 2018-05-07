@@ -53,18 +53,18 @@
             </div>
         </div>
         <div class="articles mrgt">
-            <div class="title" flex='main:justify'>
+            <router-link :to="{path:'/news',query:{title:'公司新闻'}}" tag="div" class="title" flex='main:justify'>
                 <span class="name news">公司新闻</span>
                 <span class="open">更多</span>
-            </div>
-            <list-news :list="articles.news.list"></list-news>
+            </router-link>
+            <list-news :list="articles.news.list" title='公司新闻'></list-news>
         </div>
         <div class="articles mrgt">
-            <div class="title" flex='main:justify'>
+            <router-link :to="{path:'/news',query:{title:'大理最新动态'}}" tag="div" class="title" flex='main:justify'>
                 <span class="name dynamic">大理最新动态</span>
                 <span class="open">更多</span>
-            </div>
-            <list-news :list="articles.dynamic.list"></list-news>
+            </router-link>
+            <list-news :list="articles.dynamic.list"  title='大理最新动态'></list-news>
         </div>
     </div>
 </template>

@@ -1,20 +1,20 @@
 <template>
     <ul class="list_news">
-        <li flex="box:last" v-for="(item,index) in list" :key="index">
+        <router-link :to='{path:"/article",query:{title:title}}' tag="li" flex="box:last" v-for="(item,index) in list" :key="index">
             <div class="article_content">
                 <h3>{{item.title}}</h3>
-                <div class="others" flex='main:justify'>
+                <div class="others" flex='main:justify box:first'>
                     <span>{{item.createTime.substring(2)}}</span>
-                    <div class="article_data" flex='box:mean'>
+                    <div class="article_data" flex='dir:right'>
                         <span class="read">{{item.read}}</span>
-                        <span class="comment">{{item.comment}}</span>
+                        <span class="comment" v-if='!comment'>{{item.comment}}</span>
                     </div>
                 </div>
             </div>
             <div class="article_img" flex="main:center">
                 <img :src="item.imgUrl" alt="公司新闻">
             </div>
-        </li>
+        </router-link>
     </ul>
 </template>
 
@@ -26,7 +26,7 @@ export default {
         return {
         }
     },
-    props:['list'],
+    props:['list','comment','title'],
     methods:{
     },
     mounted(){
@@ -45,8 +45,7 @@ export default {
                 position: relative;
                 height: 100%;
                 h3{
-                    font-size: 14px;
-                    font-weight: 900;
+                    font-size: 16px;
                     color: #212121;
                     text-align: left;
                     padding-right: 10px;
@@ -61,14 +60,16 @@ export default {
                     font-size: 12px;
                     width: 100%;
                     color: #999999;
+                    overflow: hidden;
                     .article_data{
-                        width: 110px;
                         margin-right: 0;
                         span{
                             padding-left: 16px;
                             background: url($url+"articles_comment.png") no-repeat left center;
                             background-size: auto 11px;
                             text-align: left;
+                            margin-right: 10px;
+
                         }
                         .read{
                             background-image: url($url+"icon_read.png");
@@ -96,6 +97,9 @@ export default {
     @media screen and (max-width: 340px) {
     body {
         .article_content{
+            h3{
+                font-size: 14px !important;
+            }
             .others span{
                  font-size: 10px;
             }
