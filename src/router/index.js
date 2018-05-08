@@ -9,6 +9,7 @@ const Shop = r => require.ensure([], () => r(require('@/pages/shop/Shop')), 'hom
 const Setting = r => require.ensure([], () => r(require('@/pages/setting/Setting')), 'home')
 const SetSecurity = r => require.ensure([], () => r(require('@/pages/setting/SetSecurity')), 'setting')
 const Share = r => require.ensure([], () => r(require('@/pages/setting/Share')), 'setting')
+const Proposal = r => require.ensure([], () => r(require('@/pages/setting/Proposal')), 'setting')
 
 
 
@@ -49,6 +50,11 @@ export default new Router({
             path: '/setting',
             name: 'setting',
             component: Setting
+        },
+        {
+            path: '/proposal',
+            name: 'proposal',
+            component: Proposal
         },
         {
             path: '/setSecurity',

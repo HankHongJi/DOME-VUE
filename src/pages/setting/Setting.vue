@@ -34,13 +34,13 @@
             </router-link>
         </div>
         <div class="navs">
-            <div class="item" flex="box:first">
+            <router-link to="/proposal" tag="div" class="item" flex="box:first">
                 <div class="icon icon_yj"></div>
                 <div class="text" flex="main:justify">
                     <div class="name">意见与建议</div>
                     <span></span>
                 </div>
-            </div>
+            </router-link>
         </div>
         <div class="sign_out">退出系统</div>
     </div>

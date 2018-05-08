@@ -33,7 +33,7 @@ export default {
         position: fixed;
         z-index: 999;
         right: 18px;
-        bottom: 30px;
+        bottom: 60px;
         border-radius: 50%;
         opacity: 0;
         // visibility: hidden;

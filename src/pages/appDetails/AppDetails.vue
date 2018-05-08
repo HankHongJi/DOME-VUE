@@ -46,6 +46,7 @@
                 全部评论
             </div>
         </div>
+        <div style="height:60px"></div>
         <div class="update">
             更新 ({{appInfo.size}}MB)
         </div>
@@ -113,7 +114,6 @@ export default {
             height: 100%;
             overflow: auto;
             background:#f4f4f4;
-            padding-bottom: 20px;
         }
         .update{
             height: 50px;
