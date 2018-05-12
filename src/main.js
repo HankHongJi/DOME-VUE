@@ -56,7 +56,7 @@ document.body.addEventListener('touchstart', function () {});
 var docEl = document.documentElement;
 router.beforeEach((to, from, next) => {
     //存放需显示底部导航的路由名
-    const navigationShow=['home','myApp','setting','shop'];
+    const navigationShow=['home','myApp','setting','shop','mail'];
     //白色背景路由
     const bodyBgc=['share'];
     store.commit('SET_STATE',{name:"navigation",content:navigationShow.includes(to.name)});

@@ -107,7 +107,7 @@ export default {
                 }
                 .text{
                     padding-right: 18px;
-                    border-bottom: 0.5px solid #e5e5e5;
+                    border-bottom: 1px solid #e5e5e5;
                     div.name{
                         font-size: 16px;
                     }

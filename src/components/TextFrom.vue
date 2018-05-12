@@ -1,7 +1,7 @@
 <template>
     <div class="text_from">
         <div class="from_box">
-            <div class="title">
+            <div class="title" v-if="!title">
                 <input type="text" @change="change" v-model="fromData.title" placeholder="标题">
             </div>
             <div class="text">
@@ -26,7 +26,7 @@ export default {
             },
         }
     },
-    props:['maxNum','textareaPlaceholder'],
+    props:['maxNum','textareaPlaceholder','title'],
     methods:{
         change(){
             if(this.fromData.content.length>this.maxNum){

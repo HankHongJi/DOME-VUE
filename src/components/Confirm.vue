@@ -6,8 +6,8 @@
                 <h2>{{confirm.title || '温馨提示'}}</h2>
                 <div class="text" v-html="confirm.text|| '请确认'"></div>
                 <div class="btns" flex='box:mean'>
-                    <div class="btn" @click='execute(confirm.okFun)'>{{confirm.okName ||'确定'}}</div>
-                    <div class="btn" v-if='confirm.noFun' @click='execute(confirm.noFun)'>{{confirm.noName ||'取消'}}</div>
+                    <div class="btn_confirm" @click='execute(confirm.okFun)'>{{confirm.okName ||'确定'}}</div>
+                    <div class="btn_confirm" v-if='confirm.noFun' @click='execute(confirm.noFun)'>{{confirm.noName ||'取消'}}</div>
                 </div>
             </div>
         </div>
@@ -98,10 +98,10 @@ export default {
                 height: 45px;
                 line-height: 45px;
                 text-align: center;
-                border-top: 0.5px solid #ccc;
+                border-top: 1px solid #ccc;
                 font-size: 16px;
                 div:nth-child(2){
-                    border-left:  0.5px solid #ccc;
+                    border-left:  1px solid #ccc;
                 }
             }
             .effect{

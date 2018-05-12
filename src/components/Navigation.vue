@@ -1,7 +1,7 @@
 <template>
     <div class="navigation">
         <div class="catalog" flex="box:mean">
-            <router-link to='/new' key='1' :class="activeClass">消息</router-link>
+            <router-link to='/mail' key='1'>消息</router-link>
             <router-link to='/myApp' key='2'>我的应用</router-link>
             <router-link to='/home' key='3'>首页</router-link>
             <router-link to='/shop' key='4'>应用商店</router-link>
@@ -42,7 +42,7 @@ export default {
             bottom: 0;
             z-index: 999;
             height: 50px;
-            border-top:0.5px solid #b2b2b2;
+            border-top:1px solid #b2b2b2;
             color: #666666;
             line-height: 1;
             background: #f9f9f9;
@@ -56,6 +56,10 @@ export default {
             a:nth-child(2){
                 background: url("../assets/home_use_icon.png") no-repeat center 6px;
                 background-size: 19px auto;
+                &.router-link-active{
+                    background: url("../assets/home_use_icon_a.png") no-repeat center 5px;
+                    background-size: 24px auto;
+                }
             }
             a:nth-child(3){
                 background: url("../assets/home_home_icon.png") no-repeat center 6px;

@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div class="item" flex="box:first">
-                <div class="name">社交分享</div>
+                <div class="name">设置手势密码</div>
                 <span class="goto"></span>
             </div>
         </div>
@@ -63,7 +63,7 @@ export default {
                 height: 50px;
                 line-height: 50px;
                 margin: 0 18px;
-                border-bottom: 0.5px solid #e5e5e5;
+                border-bottom:1px solid #e5e5e5;
                 div.name{
                     font-size: 16px;
                 }
@@ -85,7 +85,7 @@ export default {
                     }
                     &:after{
                         position: absolute;
-                        border: 0.5px solid #e5e5e5;
+                        border: 1px solid #e5e5e5;
                         top: 50%;
                         transform: translate3d(0,-50%,0);
                         display: block;

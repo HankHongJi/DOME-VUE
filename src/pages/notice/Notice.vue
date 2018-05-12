@@ -59,7 +59,7 @@ export default {
             .item{
                 padding: 15px 0;
                 min-height: 105px;
-                border-bottom: 0.5px solid #e5e5e5;
+                border-bottom: 1px solid #e5e5e5;
                 position: relative;
                 .title{
                     font-size: 16px;

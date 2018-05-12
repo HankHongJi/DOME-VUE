@@ -27,9 +27,9 @@
         <div class="app_comment">
             <div class="title" flex='main:justify'>
                 <span class="name news">公司新闻</span>
-                <span class="write">我要评论</span>
+                <router-link to="/commenting" tag="span" class="write">我要评论</router-link>
             </div>
-            <div class="item" flex="box:first" v-for="(item,index) in comment" :key="index">
+            <div class="item" flex="box:first" v-for="(item,index) in comment" :key="index" v-if="index<showMax">
                 <div class="head-box">
                     <img :src="item.userHeadimg" alt="">
                 </div>
@@ -42,7 +42,7 @@
                     </div>
                 </div>
             </div>
-            <div class="app_all">
+            <div class="app_all" v-if="showMax!=comment.length" @click="showMax=comment.length">
                 全部评论
             </div>
         </div>
@@ -72,6 +72,7 @@ export default {
                 6:{appId:6,icon:'icon icon-tx',name:'通讯录',downloads:6646,size:26.4,install:false,update:true,creatTime:'2018/08/11 12:03',screenshot:[screenshot1,screenshot2,screenshot3]},
                 7:{appId:7,icon:'icon icon-yx',name:'一线之音',downloads:6646,size:26.4,install:true,update:true,creatTime:'2018/05/11 12:03',screenshot:[screenshot1,screenshot2,screenshot3]},
             },
+            showMax:3,
             appInfo:{},
             tab:true,
             comment:[
@@ -88,6 +89,34 @@ export default {
                     content:'找了好久这款APP，终于被为找到了，刚刚下载，还有好多功能没去做详细了解，棒。',
                     creatTime:'2018/05/11 12:03',
                     fabulous:885
+                },
+                {
+                    userName:'李敏',
+                    userHeadimg:userHeadimg1,
+                    content:'这款APP非常好用，真不错不错，值得推荐，哈哈哈哈。',
+                    creatTime:'2018/05/11 12:03',
+                    fabulous:46
+                },
+                {
+                    userName:'李敏',
+                    userHeadimg:userHeadimg1,
+                    content:'这款APP非常好用，真不错不错，值得推荐，哈哈哈哈。',
+                    creatTime:'2018/05/11 12:03',
+                    fabulous:46
+                },
+                {
+                    userName:'李敏',
+                    userHeadimg:userHeadimg1,
+                    content:'这款APP非常好用，真不错不错，值得推荐，哈哈哈哈。',
+                    creatTime:'2018/05/11 12:03',
+                    fabulous:46
+                },
+                {
+                    userName:'李敏',
+                    userHeadimg:userHeadimg1,
+                    content:'这款APP非常好用，真不错不错，值得推荐，哈哈哈哈。',
+                    creatTime:'2018/05/11 12:03',
+                    fabulous:46
                 },
                 {
                     userName:'李敏',
@@ -150,7 +179,7 @@ export default {
                     width: 56px;
                     height: 56px;
                     border-radius: 50%;
-                    border: 0.5px solid #ececec;
+                    border: 1px solid #ececec;
                     overflow: hidden;
                     img{
                         width: 100%;

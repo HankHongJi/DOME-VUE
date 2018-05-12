@@ -22,10 +22,10 @@
             </div>
         </div>
         <ul class="navs mrgt">
-            <li v-for="(item,index) in navs" :key='index' flex="dir:top cross:center">
+            <router-link :to="item.path" tag="li" v-for="(item,index) in navs" :key='index' flex="dir:top cross:center">
                 <span class="icon" :class="item.icon"></span>
                 <p>{{item.name}}</p>
-            </li>
+            </router-link>
         </ul>
         <router-link tag="div" to="/notice" class="notice">
             最新公告：微信微博，云南移动精彩无限！
@@ -87,14 +87,14 @@ export default {
                 {src:banner2,name:'轮播'}
             ],
             navs:[
-                {name:'资产管理',icon:'icon-zc'},
-                {name:'云移资讯',icon:'icon-yy'},
-                {name:'BOMC',icon:'icon-bo'},
-                {name:'手机经分',icon:'icon-sj'},
-                {name:'质量管理',icon:'icon-zl'},
-                {name:'通讯录',icon:'icon-tx'},
-                {name:'一线之音',icon:'icon-yx'},
-                {name:'添加',icon:'icon-tj'}
+                {name:'资产管理',icon:'icon-zc',path:'/'},
+                {name:'云移资讯',icon:'icon-yy',path:'/'},
+                {name:'BOMC',icon:'icon-bo',path:'/'},
+                {name:'手机经分',icon:'icon-sj',path:'/'},
+                {name:'质量管理',icon:'icon-zl',path:'/'},
+                {name:'通讯录',icon:'icon-tx',path:'/mailList'},
+                {name:'一线之音',icon:'icon-yx',path:'/'},
+                {name:'添加',icon:'icon-tj',path:'/'}
             ],
             articles:{
                 news:{

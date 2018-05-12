@@ -2,9 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 const Home = r => require.ensure([], () => r(require('@/pages/home/Home')), 'home')
 const MyApp = r => require.ensure([], () => r(require('@/pages/myApp/MyApp')), 'home')
-const New = r => require.ensure([], () => r(require('@/pages/new/New')), 'home')
+const Mail = r => require.ensure([], () => r(require('@/pages/mail/Mail')), 'home')
 const News = r => require.ensure([], () => r(require('@/pages/news/News')), 'home')
 const Shop = r => require.ensure([], () => r(require('@/pages/shop/Shop')), 'home')
+const MailList= r => require.ensure([], () => r(require('@/pages/mailList/MailList')), 'home')
+const MailInfo= r => require.ensure([], () => r(require('@/pages/mailList/MailInfo')), 'MailInfo')
 
 const Setting = r => require.ensure([], () => r(require('@/pages/setting/Setting')), 'home')
 const SetSecurity = r => require.ensure([], () => r(require('@/pages/setting/SetSecurity')), 'setting')
@@ -14,8 +16,10 @@ const Proposal = r => require.ensure([], () => r(require('@/pages/setting/Propos
 
 
 const AppDetails = r => require.ensure([], () => r(require('@/pages/appDetails/AppDetails')), 'appDetails')
+const Commenting = r => require.ensure([], () => r(require('@/pages/appDetails/Commenting')), 'commenting')
 const Notice= r => require.ensure([], () => r(require('@/pages/Notice/Notice')), 'Notice')
 const Article= r => require.ensure([], () => r(require('@/pages/article/Article')), 'Article')
+
 Vue.use(Router)
 
 export default new Router({
@@ -27,9 +31,19 @@ export default new Router({
             redirect:'/home'
         },
         {
-            path: '/new',
-            name: 'new',
-            component: New
+            path: '/mail',
+            name: 'mail',
+            component: Mail
+        },
+        {
+            path: '/mailList',
+            name: 'mailList',
+            component: MailList
+        },
+        {
+            path: '/mailInfo',
+            name: 'mailInfo',
+            component: MailInfo
         },
         {
             path: '/myApp',
@@ -65,6 +79,11 @@ export default new Router({
             path: '/share',
             name: 'share',
             component: Share
+        },
+        {
+            path: '/commenting',
+            name: 'commenting',
+            component: Commenting
         },
         {
             path: '/appDetails',
