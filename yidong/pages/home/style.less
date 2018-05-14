@@ -1,0 +1,146 @@
+ @url: "../../assets/";
+ html {
+     background: #f4f4f4;
+ }
+ 
+ .home {
+     .open {
+         display: block;
+         background: url("../../assets/icon-open.png") no-repeat;
+         background-size: 100% auto;
+         width: 6px;
+         height: 10px;
+     }
+     .mrgt {
+         margin-top: 10px;
+     }
+     @media screen and (max-width: 340px) {
+         body {
+             .article_content {
+                 .others span {
+                     font-size: 10px;
+                 }
+                 .article_data {
+                     width: 94px !important;
+                 }
+             }
+         }
+     }
+     .banner-box {
+         width: 100%;
+         height: 3.78rem;
+         img {
+             width: 7.5rem;
+         }
+     }
+     .navs-more {
+         height: 210px;
+         background: #fff;
+         overflow: auto;
+         >div {
+             height: 100%;
+             float: left;
+             .text {
+                 margin: 23px 0 0 18px;
+                 width: 1.5rem;
+                 text-align: left;
+                 div {
+                     font-size: 16px;
+                     color: #212121;
+                     font-weight: 900;
+                     line-height: 1;
+                     margin-bottom: 12px;
+                 }
+                 p {
+                     color: #9c9c9c;
+                 }
+             }
+         }
+         .mail {
+             width: 2.85rem;
+             border-right: 1px solid #e5e5e5;
+             background: url("@{url}mail_icon.png") no-repeat center 110px;
+             background-size: auto 79px;
+         }
+         .other {
+             >div {
+                 height: 50%;
+                 width: 4.65rem;
+                 overflow: hidden;
+             }
+             .cars {
+                 border-bottom: 1px solid #e5e5e5;
+                 background: url("@{url}car_icon.png") no-repeat 2.0rem 28px;
+                 background-size: auto 52px;
+             }
+             .fault {
+                 background: url("@{url}fault_icon.png") no-repeat 2.28rem 24px;
+                 background-size: auto 59px;
+             }
+         }
+     }
+     .notice {
+         height: 45px;
+         line-height: 45px;
+         text-align: left;
+         padding-left: 41px;
+         background: url("../../assets/home_notice_icon.png") #fff3d3 18px center no-repeat;
+         background-size: 16px auto;
+         color: #1a1a1a;
+     }
+     .navs {
+         background: #fff;
+         overflow: auto;
+         padding: 25px 0 3px;
+         li {
+             width: 25%;
+             height: 96px;
+             float: left;
+             span {
+                 width: 50px;
+                 height: 50px;
+                 display: block;
+                 img {
+                     width: 100%;
+                     height: 100%;
+                 }
+             }
+             p {
+                 margin-top: 10px;
+                 line-height: 1;
+             }
+         }
+     }
+     .mytask {
+         height: 80px;
+         background: #fff;
+         .text {
+             text-align: left;
+             line-height: 1.2;
+             span {
+                 font-weight: 900;
+                 font-size: 16px;
+             }
+         }
+         >div {
+             padding-left: 77px;
+             background: url("@{url}home_mytask2.png") no-repeat 18px center;
+             background-size: 44px auto;
+             .open {
+                 float: right;
+                 width: 6px;
+                 margin-right: 14px;
+             }
+         }
+         >div:nth-child(1) {
+             &:after {
+                 display: block;
+                 content: "";
+                 width: 1px;
+                 height: 36px;
+                 background: #e5e5e5;
+             }
+             background-image: url("@{url}home_mytask1.png");
+         }
+     }
+ }

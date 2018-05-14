@@ -1,0 +1,48 @@
+
+.set_share {
+	height: 100%;
+}
+
+.set_share .qr-box {
+	width: 4rem;
+	height: 4rem;
+	margin: 64px auto 104px;
+}
+
+.set_share .qr-box img {
+	width: 100%;
+	height: 100%;
+	-webkit-box-shadow: 0 8px 15px #cddffc;
+	box-shadow: 0 8px 15px #cddffc;
+}
+
+.set_share .shares {
+	padding: 0 38px;
+}
+
+.set_share .shares .text {
+	height: 20px;
+	border-top: 1px solid #cccccc;
+	position: relative;
+}
+
+.set_share .shares .text div {
+	position: absolute;
+	width: 98px;
+	background: #fff;
+	left: 50%;
+	margin-left: -49px;
+	top: -10px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 16px;
+}
+
+.set_share .shares .list {
+	margin-top: 50px;
+	text-align: center;
+}
+
+.set_share .shares .list p {
+	margin-top: 8px;
+}

@@ -1,0 +1,19 @@
+
+
+.notice_details {
+  height: 100%;
+  background: #fff;
+}
+.notice_details .content_outer {
+    padding: 15px 18px;
+}
+.notice_details h3 {
+    font-size: 22px;
+    font-weight: 900;
+    text-align: left;
+    margin-bottom: 15px;
+}
+.notice_details .content {
+    text-align: left;
+    margin-top: 18px;
+}

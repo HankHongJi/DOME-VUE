@@ -49,7 +49,7 @@ export default {
 
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
     $url:'../../assets/';
     .mail_info{
         position: relative;

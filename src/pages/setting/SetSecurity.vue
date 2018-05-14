@@ -68,8 +68,8 @@ export default {
                     font-size: 16px;
                 }
                 .swich{
-                    width: 51px;
-                    height: 31px;
+                    width: 52px;
+                    height: 32px;
                     border-radius: 16px;
                     position: relative;
                     border: 1px solid #e5e5e5;
@@ -85,13 +85,14 @@ export default {
                     }
                     &:after{
                         position: absolute;
-                        border: 1px solid #e5e5e5;
+                        box-shadow: 1px 0 1px #ccc;
                         top: 50%;
+                        left: 0;
                         transform: translate3d(0,-50%,0);
                         display: block;
                         content: "";
-                        width: 28px;
-                        height: 28px;
+                        width: 30px;
+                        height: 30px;
                         background: #fff;
                         border-radius: 50%;
                         transition: all 0.2s;
@@ -102,6 +103,8 @@ export default {
                     border: 1px solid #4ed964;
                     &:after{
                         transform: translate3d(20px,-50%,0);
+                        box-shadow: none;
+                        border: 0;
                     }
                 }
                 .goto{

@@ -1,0 +1,44 @@
+html {
+  background: #f4f4f4;
+}
+.my_app .font-md {
+  background: #fff;
+  height: 44px;
+  line-height: 44px;
+}
+.my_app .item {
+  padding: 0 18PX;
+  background: #fff;
+  margin-top: 10px;
+  height: 96px;
+}
+.my_app .item span.icon {
+  width: 50px;
+  height: 50px;
+}
+.my_app .item span.icon img {
+  width: 100%;
+  height: 100%;
+}
+.my_app .item .content {
+  text-align: left;
+  padding-left: 10px;
+}
+.my_app .item .content .name {
+  font-size: 12px;
+  color: #f87926;
+}
+.my_app .item .content .name span {
+  color: #212121;
+  font-size: 18px;
+  margin-right: 8px;
+}
+.my_app .item .text {
+  font-size: 12px;
+  height: 36px;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

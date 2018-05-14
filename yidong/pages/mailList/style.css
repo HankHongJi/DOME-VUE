@@ -1,0 +1,156 @@
+html {
+  background: #f4f4f4;
+}
+
+.mail_list .unit_list {
+  border-top: 1px solid #dddddd;
+  background: #fff;
+  padding-left: 18px;
+}
+.mail_list .unit_list .item {
+    min-height: 45px;
+}
+.mail_list .unit_list .item.leader > span {
+      background: url(../../assets/icon_leader.png) no-repeat center;
+      background-size: auto 12px;
+}
+.mail_list .unit_list .item.leader .content {
+      padding-right: 18px;
+}
+.mail_list .unit_list .item.leader .content div {
+        width: 44px;
+        height: 44px;
+        background: url(../../assets/icon_go.png) no-repeat right center;
+        background-size: 8px auto;
+}
+.mail_list .unit_list .item > span {
+      display: block;
+      width: 27px;
+      height: 45px;
+}
+.mail_list .unit_list .item > span.icon_open {
+        background: url(../../assets/icon_open.png) no-repeat center;
+        background-size: 16px auto;
+}
+.mail_list .unit_list .item > span.icon_close {
+        background: url(../../assets/icon_close.png) no-repeat center;
+        background-size: 16px auto;
+}
+.mail_list .unit_list .item .content {
+      text-align: left;
+      color: #212121;
+      min-height: 45px;
+      line-height: 44px;
+      border-bottom: 1px solid #ebebeb;
+}
+.mail_list .input_box {
+  height: 50px;
+  background: #fff;
+  padding: 9px 18px;
+}
+.mail_list .input_box input {
+    display: block;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    background: url(../../assets/icon_search.png) #f4f4f4 no-repeat 10px center;
+    background-size: 15px auto;
+    border: 0;
+    padding-left: 33px;
+}
+.mail_list .navs {
+  height: 44px;
+  line-height: 44px;
+  background: #fff;
+  position: relative;
+}
+.mail_list .navs div.item {
+    font-size: 16px;
+    height: 100%;
+    width: 33.33%;
+    float: left;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+    position: relative;
+    color: #676767;
+}
+.mail_list .navs div.item input {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+}
+.mail_list .navs div.active {
+    color: #4585f4;
+    font-size: 16px;
+    position: relative;
+}
+.mail_list .navs .active_bar {
+    width: 21px;
+    height: 3px;
+    border-radius: 5px;
+    background: #4585f4;
+    position: absolute;
+    margin-left: -11px;
+    bottom: 5px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.mail_list .news_list {
+  background: #fff;
+}
+
+.list_mail {
+  background: #fff;
+  padding-left: 18px;
+  border-top: 1px solid #e5e5e5;
+}
+.list_mail li {
+    height: 60px;
+    border-top: 1px solid #e5e5e5;
+}
+.list_mail li .head_box {
+      width: 51px;
+      height: 100%;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+}
+.list_mail li .head_box img {
+        width: 100%;
+        height: 100%;
+}
+.list_mail li .text {
+      text-align: left;
+      padding-left: 10px;
+}
+.list_mail li .text div {
+        color: #212121;
+        font-size: 16px;
+}
+.list_mail li .text span {
+        color: #999999;
+}
+.list_mail li .tell {
+      height: 22px;
+      width: 51px;
+      background: url(../../assets/icon_tell.png) no-repeat 21px center;
+      background-size: 15px auto;
+      border-left: 1px solid #dddddd;
+}
+.list_mail li:nth-child(1) {
+      border: 0;
+}
+
+
+.list_unit li {
+  height: 45px;
+  background: url(../../assets/icon_go.png) no-repeat left center;
+  background-size: 8px auto;
+  color: #212121;
+  padding-left: 22px;
+}

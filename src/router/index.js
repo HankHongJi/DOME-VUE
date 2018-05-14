@@ -23,7 +23,6 @@ const Article= r => require.ensure([], () => r(require('@/pages/article/Article'
 Vue.use(Router)
 
 export default new Router({
-    mode: 'history',
     routes: [
         {
             path: '/',

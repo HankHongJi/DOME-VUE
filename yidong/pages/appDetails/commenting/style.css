@@ -1,0 +1,11 @@
+html {
+  background: #f4f4f4;
+}
+
+.commenting .btn {
+  height: 48px;
+  line-height: 48px;
+  font-size: 16px;
+  margin: 18px;
+  width: auto;
+}

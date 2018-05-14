@@ -1,0 +1,49 @@
+html {
+  background: #f4f4f4;
+}
+
+
+.news .navs {
+  height: 44px;
+  line-height: 44px;
+  background: #fff;
+  position: relative;
+}
+.news .navs div.item {
+    font-size: 16px;
+    height: 100%;
+    width: 33.33%;
+    float: left;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+    position: relative;
+    color: #676767;
+}
+.news .navs div.item input {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+}
+.news .navs div.active {
+    color: #4585f4;
+    font-size: 16px;
+    position: relative;
+}
+.news .navs .active_bar {
+    width: 21px;
+    height: 3px;
+    border-radius: 5px;
+    background: #4585f4;
+    position: absolute;
+    margin-left: -11px;
+    bottom: 5px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.news .news_list {
+  background: #fff;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>云南移动</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- 导航栏 -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<!-- 导航栏 -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<!-- 状态栏样式 -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+		<script type="text/javascript">
+			/*  设置REM(100PX=>1REM) */ ;
+			(function() {
+				var docEl = document.documentElement;
+				var resize = 'orientationchange' in window ? 'orientationchange' : 'resize';
+				var setRem = function() {
+					var screenWidth = docEl.clientWidth || window.screen.width || 360;
+					var screenHeight = docEl.clientHeight || window.screen.Height || 360;
+					var remWidth = screenWidth < screenHeight ? screenWidth : screenHeight;
+					docEl.style.fontSize = (100 * screenWidth / 750) + 'px';
+				};
+				window.addEventListener('resize', setRem, false);
+				document.addEventListener('DOMContentLoaded', setRem, false);
+				setRem();
+			})();
+		</script>
+		<link rel="stylesheet" type="text/css" href="../../tool/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../tool/flex.css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<div class="mail_list app_content" style="margin-bottom: 0px;">
+				<div class="back-title">
+					<div class="back"></div>
+					通讯录
+				</div>
+				<div class="input_box"><input type="text" placeholder="请输入姓名/工号进行查找"></div>
+				<div class="navs">
+					<div class="item active">
+						省公司
+					</div>
+					<div class="item">
+						地州公司
+					</div>
+					<div class="item">
+						最近联系人
+					</div>
+					<div class="active_bar" style="left: 16.67%;"></div>
+				</div>
+				<div class="unit_list">
+					<div flex="cross:center box:first" class="item leader"><span></span>
+						<div flex="box:last" class="content"><span>公司领导 (5)</span>
+							<div></div>
+						</div>
+					</div>
+					<div flex="box:first" class="item"><span class="icon_close"></span>
+						<div flex="dir:top" class="content"><span>客户体验管理部</span>
+							<!---->
+						</div>
+					</div>
+					<div flex="box:first" class="item"><span class="icon_open"></span>
+						<div flex="dir:top" class="content"><span>客户体验管理部</span>
+							<ul class="list_unit">
+								<li flex="main:justify cross:center box:justify">
+									部门领导 (3)
+								</li>
+								<li flex="main:justify cross:center box:justify">
+									市场策划管理室 (3)
+								</li>
+								<li flex="main:justify cross:center box:justify">
+									家庭客户运营室 (3)
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div flex="box:first" class="item"><span class="icon_close"></span>
+						<div flex="dir:top" class="content"><span>市场经营部</span>
+							<!---->
+						</div>
+					</div>
+				</div>
+				<div class="mail_list" style="display: none;">
+					<ul class="list_mail">
+						<li class="" flex="main:justify cross:center box:justify">
+							<div class="head_box"><img src="../../assets/user_head_img1.png" alt=""></div>
+							<div class="text">
+								<div class="name">撒倩</div> <span>13908700001</span></div>
+							<div class="tell"></div>
+						</li>
+						<li class="" flex="main:justify cross:center box:justify">
+							<div class="head_box"><img src="../../assets/user_head_img2.png" alt=""></div>
+							<div class="text">
+								<div class="name">李敏</div> <span>13908700002</span></div>
+							<div class="tell"></div>
+						</li>
+						<li class="" flex="main:justify cross:center box:justify">
+							<div class="head_box"><img src="../../assets/user_head_img1.png" alt=""></div>
+							<div class="text">
+								<div class="name">张珂</div> <span>13908700003</span></div>
+							<div class="tell"></div>
+						</li>
+						<li class="" flex="main:justify cross:center box:justify">
+							<div class="head_box"><img src="../../assets/user_head_img2.png" alt=""></div>
+							<div class="text">
+								<div class="name">季晓三</div> <span>13908700004</span></div>
+							<div class="tell"></div>
+						</li>
+						<li class="" flex="main:justify cross:center box:justify">
+							<div class="head_box"><img src="../../assets/user_head_img1.png" alt=""></div>
+							<div class="text">
+								<div class="name">撒倩</div> <span>13908700005</span></div>
+							<div class="tell"></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

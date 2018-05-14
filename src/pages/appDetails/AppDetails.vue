@@ -137,7 +137,7 @@ export default {
 
 }
 </script>
-<style lang="scss" type="text/css" scoped>
+<style lang="scss" type="text/css">
     .app-details{
         .box{
             height: 100%;

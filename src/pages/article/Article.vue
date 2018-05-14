@@ -38,7 +38,7 @@ export default {
 
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
     $url:'../../assets/';
     .notice_details{
         height: 100%;

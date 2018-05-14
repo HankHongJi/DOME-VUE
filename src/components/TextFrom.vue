@@ -45,7 +45,7 @@ export default {
 
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
     .from_box{
         background: #fff;
         padding: 0 18px;

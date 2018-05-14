@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>云南移动</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- 导航栏 -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<!-- 导航栏 -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<!-- 状态栏样式 -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+		<script type="text/javascript">
+			/*  设置REM(100PX=>1REM) */ ;
+			(function() {
+				var docEl = document.documentElement;
+				var resize = 'orientationchange' in window ? 'orientationchange' : 'resize';
+				var setRem = function() {
+					var screenWidth = docEl.clientWidth || window.screen.width || 360;
+					var screenHeight = docEl.clientHeight || window.screen.Height || 360;
+					var remWidth = screenWidth < screenHeight ? screenWidth : screenHeight;
+					docEl.style.fontSize = (100 * screenWidth / 750) + 'px';
+				};
+				window.addEventListener('resize', setRem, false);
+				document.addEventListener('DOMContentLoaded', setRem, false);
+				setRem();
+			})();
+		</script>
+		<link rel="stylesheet" type="text/css" href="../../tool/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../tool/flex.css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<div class="shop app_content" style="margin-bottom: 70px;">
+				<div class="font-md">应用商店</div>
+				<div class="navs">
+					<div class="active">最新应用</div>
+					<div class="">热门应用</div>
+					<div class="active_bar" style="left: 25%;"></div>
+				</div>
+				<div class="banner">
+					<img src="../../assets/shop_banner.png"/>
+				</div>
+				<div class="list">
+					<div flex="cross:center main:justify box:last" class="item">
+						<a href="#/appDetails?icon=icon%20icon-yy&amp;appId=1" class="" flex="box:first">
+							<span class="icon icon icon-yy" ><img src="../../assets/home_nav1.png"/></span>
+							<div class="text"><span>云移资讯</span>
+								<div class="count"><span>6646次下载</span>22.4MB
+								</div>
+							</div>
+						</a>
+						<!---->
+						<div class="btn" style="width: 65px;">下载</div>
+					</div>
+					<div flex="cross:center main:justify box:last" class="item">
+						<a href="#/appDetails?icon=icon%20icon-zc&amp;appId=2" class="" flex="box:first">
+							<span class="icon icon icon-zc" ><img src="../../assets/home_nav2.png"/></span>
+							<div class="text"><span>资产管理</span>
+								<div class="count"><span>555次下载</span>26.4MB
+								</div>
+							</div>
+						</a>
+						<div flex-box="0" class="uninstall">卸载</div>
+						<div class="btn" style="width: 65px;">更新</div>
+					</div>
+					<div flex="cross:center main:justify box:last" class="item">
+						<a href="#/appDetails?icon=icon%20icon-bo&amp;appId=3" class="" flex="box:first">
+							<span class="icon icon icon-bo" ><img src="../../assets/home_nav3.png"/></span>
+							<div class="text"><span>BOMC</span>
+								<div class="count"><span>6646次下载</span>21.4MB
+								</div>
+							</div>
+						</a>
+						<!---->
+						<div class="btn" style="width: 65px;">下载</div>
+					</div>
+					<div flex="cross:center main:justify box:last" class="item">
+						<a href="#/appDetails?icon=icon%20icon-sj&amp;appId=4" class="" flex="box:first">
+							<span class="icon icon icon-sj" ><img src="../../assets/home_nav4.png"/></span>
+							<div class="text"><span>手机经分</span>
+								<div class="count"><span>2256次下载</span>21.4MB
+								</div>
+							</div>
+						</a>
+						<div flex-box="0" class="uninstall">卸载</div>
+						<div class="btn" style="width: 65px;">更新</div>
+					</div>
+					<div flex="cross:center main:justify box:last" class="item">
+						<a href="#/appDetails?icon=icon%20icon-zl&amp;appId=5" class="" flex="box:first">
+							<span class="icon icon icon-zl" ><img src="../../assets/home_nav5.png"/></span>
+							<div class="text"><span>质量管理</span>
+								<div class="count"><span>5556次下载</span>26.4MB
+								</div>
+							</div>
+						</a>
+						<!---->
+						<div class="btn" style="width: 65px;">下载</div>
+					</div>
+				</div>
+			</div>
+			<div class="navigation">
+				<div flex="box:mean" class="catalog">
+					<a href="#/mail" class="">消息</a>
+					<a href="#/myApp" class="">我的应用</a>
+					<a href="#/home" class="">首页</a>
+					<a href="#/shop" class="router-link-exact-active router-link-active">应用商店</a>
+					<a href="#/setting" class="">设置</a>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

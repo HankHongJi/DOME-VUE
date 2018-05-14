@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>云南移动</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- 导航栏 -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<!-- 导航栏 -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<!-- 状态栏样式 -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+		<script type="text/javascript">
+			/*  设置REM(100PX=>1REM) */ ;
+			(function() {
+				var docEl = document.documentElement;
+				var resize = 'orientationchange' in window ? 'orientationchange' : 'resize';
+				var setRem = function() {
+					var screenWidth = docEl.clientWidth || window.screen.width || 360;
+					var screenHeight = docEl.clientHeight || window.screen.Height || 360;
+					var remWidth = screenWidth < screenHeight ? screenWidth : screenHeight;
+					docEl.style.fontSize = (100 * screenWidth / 750) + 'px';
+				};
+				window.addEventListener('resize', setRem, false);
+				document.addEventListener('DOMContentLoaded', setRem, false);
+				setRem();
+			})();
+		</script>
+		<link rel="stylesheet" type="text/css" href="../../../tool/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../../tool/flex.css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<div class="mail_info app_content" style="margin-bottom: 0px;">
+				<div class="back"></div>
+				<div flex="dir:top cross:center" class="user_info">
+					<div class="imgbox"><img src="../../../assets/user_info_head.png" alt=""></div>
+					<h3>戴越灵</h3>
+					<p style="font-size: 16px;">46008765</p>
+					<p>云南移动/信息技术部/信息系统室</p>
+				</div>
+				<div class="more_info">
+					<div flex="box:first cross:center" class="item"><span class="icon_phone"></span>
+						<div class="content icon_wx2">13908700001 <span></span></div>
+					</div>
+					<div flex="box:first cross:center" class="item"><span class="icon_mail"></span>
+						<div class="content">saqian@yn.chinamobile.com</div>
+					</div>
+					<div flex="box:first cross:center" class="item"><span class="icon_ims"></span>
+						<div class="content no_boder">4166161</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

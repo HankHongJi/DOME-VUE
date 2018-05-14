@@ -7,7 +7,6 @@
             <router-link to='/shop' key='4'>应用商店</router-link>
             <router-link to='/setting' key='5'>设置</router-link>
         </div>
-
     </div>
 </template>
 

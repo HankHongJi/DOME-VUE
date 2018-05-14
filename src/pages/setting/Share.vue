@@ -42,7 +42,7 @@ export default {
     }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
     $url:'../../assets/';
     .set_share{
         height: 100%;

@@ -19,7 +19,7 @@ export default {
 
 }
 </script>
-<style lang="scss" type="text/css" scoped>
+<style lang="scss" type="text/css">
     .back-title{
         height: 44px;
         background:url("../assets/icon_back.png") #fff no-repeat 18px center;

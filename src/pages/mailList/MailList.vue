@@ -591,7 +591,7 @@ export default {
 
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
     $url:'../../assets/';
     .mail_list{
         .unit_list{

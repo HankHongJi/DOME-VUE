@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>云南移动</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- 导航栏 -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<!-- 导航栏 -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<!-- 状态栏样式 -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+		<script type="text/javascript">
+			/*  设置REM(100PX=>1REM) */ ;
+			(function() {
+				var docEl = document.documentElement;
+				var resize = 'orientationchange' in window ? 'orientationchange' : 'resize';
+				var setRem = function() {
+					var screenWidth = docEl.clientWidth || window.screen.width || 360;
+					var screenHeight = docEl.clientHeight || window.screen.Height || 360;
+					var remWidth = screenWidth < screenHeight ? screenWidth : screenHeight;
+					docEl.style.fontSize = (100 * screenWidth / 750) + 'px';
+				};
+				window.addEventListener('resize', setRem, false);
+				document.addEventListener('DOMContentLoaded', setRem, false);
+				setRem();
+			})();
+		</script>
+		<link rel="stylesheet" type="text/css" href="../../tool/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../tool/flex.css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<div class="my_app app_content" style="margin-bottom: 70px;">
+				<div class="font-md">
+					我的应用
+				</div>
+				<div class="apps">
+					<div flex="box:first cross:center" class="item"><span class="icon"><img src="../../assets/home_nav1.png" alt=""></span>
+						<div class="content">
+							<div class="name"><span>云移资讯</span>V1.2.1
+							</div>
+							<div class="text">实现当前EIP系统部分业务向移动应用的延伸，一方面从技术上打通移动应用与现有业务结合的开用与现有业务结合的开用与现有业务结合的开发</div>
+						</div>
+					</div>
+					<div flex="box:first cross:center" class="item"><span class="icon"><img src="../../assets/home_nav2.png" alt=""></span>
+						<div class="content">
+							<div class="name"><span>资产管理</span>V1.2.1
+							</div>
+							<div class="text">实现当前EIP系统部分业务向移动应用的延伸，一方面从技术上打通移动应用与现有业务结合的开发</div>
+						</div>
+					</div>
+					<div flex="box:first cross:center" class="item"><span class="icon"><img src="../../assets/home_nav3.png" alt=""></span>
+						<div class="content">
+							<div class="name"><span>BOMC</span>V1.2.1
+							</div>
+							<div class="text">实现当前EIP系统部分业务向移动应用的延伸，一方面从技术上打通移动应用与现有用与现有业务结合的开业务结合的开发</div>
+						</div>
+					</div>
+					<div flex="box:first cross:center" class="item"><span class="icon"><img src="../../assets/home_nav4.png" alt=""></span>
+						<div class="content">
+							<div class="name"><span>手机经分</span>V1.2.1
+							</div>
+							<div class="text">实现当前EIP系统部分业务向移动应用的延伸，一方面从技术上打通移动应用与现有业务结合的开发</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="navigation">
+				<div flex="box:mean" class="catalog">
+					<a href="#/mail" class="">消息</a>
+					<a href="../myApp/myApp.html" class="router-link-exact-active router-link-active">我的应用</a>
+					<a href="#/home" class="">首页</a>
+					<a href="#/shop" class="">应用商店</a>
+					<a href="#/setting" class="">设置</a>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

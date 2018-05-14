@@ -1,0 +1,81 @@
+html {
+  background: #f4f4f4;
+}
+.shop {
+  position: relative;
+}
+.shop .font-md {
+  height: 44px;
+  line-height: 44px;
+  background: #fff;
+}
+.shop .navs {
+  height: 44px;
+  line-height: 44px;
+  background: #fff;
+  position: relative;
+}
+.shop .navs div {
+  font-size: 16px;
+  height: 100%;
+  width: 50%;
+  float: left;
+  transition: all 0.1s;
+}
+.shop .navs div.active {
+  color: #4585f4;
+  font-size: 16px;
+  position: relative;
+}
+.shop .navs .active_bar {
+  width: 21px;
+  height: 3px;
+  border-radius: 5px;
+  background: #4585f4;
+  position: absolute;
+  margin-left: -11px;
+  bottom: 5px;
+  transition: all 0.3s;
+}
+.shop .banner {
+  height: 2.5rem;
+}
+.shop .banner img {
+  width: 100%;
+  height: 100%;
+}
+.shop .list {
+  overflow: auto;
+}
+.shop .list .item {
+  margin-top: 10px;
+  padding: 0 18px;
+  background: #fff;
+  height: 86px;
+}
+.shop .list .item > a span {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+.shop .list .item > a span img {
+  width: 100%;
+  height: 100%;
+}
+.shop .list .item .uninstall {
+  color: #4585f4;
+  text-decoration: underline;
+  width: 50px;
+  padding: 0 5px;
+}
+.shop .list .item .text {
+  text-align: left;
+  padding-left: 8px;
+}
+.shop .list .item .text > span {
+  font-weight: 900;
+  font-size: 14px;
+}
+.shop .list .item .text .count span {
+  margin-right: 10px;
+}

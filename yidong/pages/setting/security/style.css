@@ -1,0 +1,72 @@
+html {
+  background: #f4f4f4;
+}
+.set_security .navs {
+  overflow: auto;
+  margin-top: 10px;
+  background: #fff;
+}
+.set_security .navs .item {
+  height: 50px;
+  line-height: 50px;
+  margin: 0 18px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.set_security .navs .item div.name {
+  font-size: 16px;
+}
+.set_security .navs .item .swich {
+  width: 52px;
+  height: 32px;
+  border-radius: 16px;
+  position: relative;
+  border: 1px solid #e5e5e5;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.set_security .navs .item .swich input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  opacity: 0;
+}
+.set_security .navs .item .swich:after {
+  position: absolute;
+  -webkit-box-shadow: 1px 0 1px #ccc;
+  box-shadow: 1px 0 1px #ccc;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+  display: block;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.set_security .navs .item .active {
+  background: #4ed964;
+  border: 1px solid #4ed964;
+}
+.set_security .navs .item .active:after {
+  -webkit-transform: translate3d(20px, -50%, 0);
+  transform: translate3d(20px, -50%, 0);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 0;
+}
+.set_security .navs .item .goto {
+  color: #999;
+  background: url(../../../assets/icon_go.png) no-repeat right center;
+  background-size: 8px auto;
+  padding-right: 20px;
+}
+.set_security .navs .item:nth-last-child(1) {
+  border-bottom: 0;
+}
